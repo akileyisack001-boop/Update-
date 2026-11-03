@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Masomo Yangu | Tovuti ya Mafunzo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #f8fafc;
+      color: #1e293b;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 16px; }
+    .header {
+      background: linear-gradient(135deg, #0f766e, #0d9488);
+      color: white;
+      padding: 1.4rem 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+    .tagline { margin-top: 4px; font-size: 0.9rem; opacity: 0.9; }
+    .hero { text-align: center; padding: 2.5rem 0 1.5rem; }
+    .hero h1 { font-size: 1.8rem; color: #0f766e; margin-bottom: 0.6rem; }
+    .hero p { color: #64748b; font-size: 1.05rem; }
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-bottom: 2rem;
+    }
+    .cat-card {
+      background: white;
+      border-radius: 12px;
+      padding: 1.2rem 0.8rem;
+      text-align: center;
+      text-decoration: none;
+      color: inherit;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+      border: 1px solid #e2e8f0;
+    }
+    .cat-icon { font-size: 1.8rem; display: block; margin-bottom: 6px; }
+    .cat-card h3 { font-size: 0.95rem; color: #0f172a; }
+    .section { margin-bottom: 2.5rem; }
+    .section h2 {
+      font-size: 1.3rem;
+      color: #0f172a;
+      margin-bottom: 1rem;
+      border-bottom: 3px solid #14b8a6;
+      display: inline-block;
+      padding-bottom: 4px;
+    }
+    .lesson {
+      background: white;
+      border-radius: 12px;
+      padding: 1.3rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      border: 1px solid #e2e8f0;
+    }
+    .lesson h3 { font-size: 1.15rem; color: #0f766e; margin-bottom: 0.4rem; }
+    .lesson .meta { font-size: 0.85rem; color: #64748b; margin-bottom: 0.7rem; }
+    .lesson p { color: #334155; margin-bottom: 0.6rem; }
+    .lesson a { color: #0d9488; font-weight: 500; }
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 10px;
+      margin: 0.8rem 0;
+    }
+    .video-container iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      border: 0;
+    }
+    audio { width: 100%; margin: 0.6rem 0; }
+    .footer {
+      background: #0f172a;
+      color: #94a3b8;
+      text-align: center;
+      padding: 1.3rem 0;
+      margin-top: auto;
+      font-size: 0.85rem;
+    }
+    @media (min-width: 600px) {
+      .categories { grid-template-columns: repeat(4, 1fr); }
+      .hero h1 { font-size: 2.1rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <span>📚</span>
+        <span>Masomo Yangu</span>
+      </div>
+      <p class="tagline">Mafundisho, Ufafanuzi wa Maandiko na Zaidi</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Karibu kwenye Masomo Yangu</h1>
+      <p>Chagua aina ya somo unayotaka.</p>
+    </section>
+
+    <div class="categories">
+      <a href="#audio" class="cat-card">
+        <span class="cat-icon">🎧</span>
+        <h3>Audio</h3>
+      </a>
+      <a href="#video" class="cat-card">
+        <span class="cat-icon">🎬</span>
+        <h3>Video</h3>
+      </a>
+      <a href="#branham" class="cat-card">
+        <span class="cat-icon">📖</span>
+        <h3>William Branham</h3>
+      </a>
+      <a href="#maandiko" class="cat-card">
+        <span class="cat-icon">✝️</span>
+        <h3>Ufafanuzi</h3>
+      </a>
+    </div>
+
+    <!-- AUDIO -->
+    <section id="audio" class="section">
+      <h2>🎧 Audio / Sauti</h2>
+
+      <div class="lesson">
+        <h3>Mfano wa Somo la Audio</h3>
+        <p class="meta">Tarehe: 03 Novemba 2026</p>
+        <p>Hapa unaweza kuweka maelezo ya somo la sauti.</p>
+        <audio controls>
+          <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+          Kivinjari chako hakikubali audio.
+        </audio>
+        <p><small>Badilisha link ya audio hapo juu na yako.</small></p>
+      </div>
+    </section>
+
+    <!-- VIDEO -->
+    <section id="video" class="section">
+      <h2>🎬 Video</h2>
+
+      <div class="lesson">
+        <h3>Mfano wa Somo la Video</h3>
+        <p class="meta">Tarehe: 03 Novemba 2026</p>
+        <p>Maelezo mafupi ya video hapa.</p>
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+        </div>
+        <p><small>Badilisha link ya YouTube na video yako.</small></p>
+      </div>
+    </section>
+
+    <!-- WILLIAM BRANHAM -->
+    <section id="branham" class="section">
+      <h2>📖 Mafundisho ya William Branham</h2>
+
+      <div class="lesson">
+        <h3>Mfano wa Fundisho</h3>
+        <p class="meta">Tarehe: 03 Novemba 2026</p>
+        <p>Andika fundisho au weka link ya audio/video ya William Branham hapa.</p>
+        <p>Unaweza kuweka maandishi marefu, nukuu, au media.</p>
+      </div>
+    </section>
+
+    <!-- UFAFANUZI WA MAANDIKO -->
+    <section id="maandiko" class="section">
+      <h2>✝️ Ufafanuzi wa Maandiko</h2>
+
+      <div class="lesson">
+        <h3>Yohana 3:16 – Mfano</h3>
+        <p class="meta">Andiko: Yohana 3:16</p>
+        <p><strong>“Kwa maana jinsi hii Mungu aliupenda ulimwengu...”</strong></p>
+        <p>Andika ufafanuzi wako hapa. Unaweza kuongeza maelezo, mifano, na maombi.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> Masomo Yangu</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
